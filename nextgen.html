@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Nights Sales Page</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom styles for animations */
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Smooth scrolling behavior for the whole page */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] font-sans text-[#0A192F] selection:bg-[#C5A059] selection:text-white pb-24 min-h-screen">
+
+    <!-- Top Banner -->
+    <div class="bg-[#0A192F] text-white text-center py-2 px-4 text-sm font-medium tracking-wide">
+        Backed by Pediatric Science • Instant Digital Access • 100% Guaranteed
+    </div>
+
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto pt-8 pb-4 px-6 flex justify-between items-center border-b border-gray-200">
+        <div class="font-black text-2xl tracking-tighter text-[#0A192F]">
+            NEXTGEN<span class="text-[#C5A059]">PARENTING</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-4xl mx-auto px-6 pt-12 pb-16 text-center">
+        <div class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
+            Important Message For Parents
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+            To the exhausted parent silently wondering: <br class="hidden md:block"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0A192F] to-[#2C5282] italic">
+                "Will my child ever outgrow this?"
+            </span>
+        </h1>
+        <h2 class="text-xl md:text-2xl text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed mb-10">
+            Why limiting evening fluids, 2 AM bathroom trips, and "waiting it out" are secretly making the problem worse—and the <strong class="text-[#0A192F]">4-week biological protocol</strong> that actually works.
+        </h2>
+    </section>
+
+    <!-- Main Sales Letter (Narrow Column for readability) -->
+    <section class="max-w-2xl mx-auto px-6 text-lg text-gray-800 leading-relaxed space-y-6">
+        <p class="font-bold text-xl">Dear Parent,</p>
+        
+        <p>Let’s talk about the 2:00 AM routine.</p>
+        
+        <p>You hear the footsteps, or the quiet crying. You drag yourself out of bed, strip the sodden sheets, wipe down the mattress, and whisper, <em>"It's okay, honey. It’s not your fault,"</em> while secretly feeling completely defeated.</p>
+        
+        <p>You’re exhausted by the laundry. But what’s truly breaking your heart isn't the lost sleep—it’s the look in your child’s eyes.</p>
+        
+        <div class="border-l-4 border-[#C5A059] pl-6 py-2 my-8 italic bg-white shadow-sm rounded-r-lg">
+            It’s the silent shame they carry. It’s the way they shrink back from sleepover invitations or summer camp. It’s the quiet, terrifying thought echoing in their little head: <strong>"What is wrong with me?"</strong> And worse, the terrifying thought in yours: <strong>"Am I failing them?"</strong>
+        </div>
+
+        <p>Listen to me: <strong>It is not your fault. And it is not their fault.</strong></p>
+
+        <p>The tragic truth is that most parents are relying on outdated, well-meaning advice that actually prolongs the problem.</p>
+
+        <ul class="space-y-4 my-8 p-6 bg-red-50 rounded-lg border border-red-100">
+            <li class="flex items-start">
+                <span class="text-red-500 mr-3 mt-1 font-bold">✗</span>
+                <span><strong>Restricting water</strong> makes the bladder smaller and less capable of holding volume.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="text-red-500 mr-3 mt-1 font-bold">✗</span>
+                <span><strong>Waking them up</strong> at midnight trains their brain to rely on you, not their own internal biological signals.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="text-red-500 mr-3 mt-1 font-bold">✗</span>
+                <span><strong>"Waiting it out"</strong> guarantees more months (or years) of shattered self-esteem.</span>
+            </li>
+        </ul>
+
+        <h3 class="text-2xl font-extrabold text-[#0A192F] mt-12 mb-4">The "Three Triggers" Discovery</h3>
+
+        <p>Pediatric science has proven that childhood bedwetting is rarely a behavioral issue or a sign of a "deep sleeper." It is almost always tied to <strong>three specific biological triggers</strong>.</p>
+        
+        <p>Until you identify which of those three triggers is affecting your child, nothing changes. You are just treating symptoms with plastic mattress covers.</p>
+
+        <p>That is exactly why I wrote <strong>Dry Nights</strong>.</p>
+
+        <!-- Interactive Element -->
+        <div class="my-12 p-8 bg-white shadow-xl rounded-xl border border-gray-100">
+            <h4 class="text-center font-bold text-xl mb-6 flex items-center justify-center gap-2">
+                <i data-lucide="heart-pulse" class="text-[#C5A059]"></i>
+                Is Your Child Experiencing This?
+            </h4>
+            <div class="space-y-4 text-base">
+                <label id="label-q1" class="checklist-item flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-colors bg-gray-50 border border-transparent">
+                    <input type="checkbox" id="q1" class="w-5 h-5 mt-1 accent-[#C5A059]">
+                    <span>They are over 5 years old and still wetting the bed multiple times a week.</span>
+                </label>
+                <label id="label-q2" class="checklist-item flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-colors bg-gray-50 border border-transparent">
+                    <input type="checkbox" id="q2" class="w-5 h-5 mt-1 accent-[#C5A059]">
+                    <span>You've tried restricting evening fluids, but they still wake up wet.</span>
+                </label>
+                <label id="label-q3" class="checklist-item flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-colors bg-gray-50 border border-transparent">
+                    <input type="checkbox" id="q3" class="w-5 h-5 mt-1 accent-[#C5A059]">
+                    <span>They are showing signs of embarrassment, avoiding sleepovers, or acting withdrawn.</span>
+                </label>
+            </div>
+            
+            <div id="checklist-success" class="hidden mt-6 p-4 bg-green-50 text-green-800 rounded-lg text-center animate-fade-in-up font-medium">
+                If you checked any of these boxes, the 4-week protocol in <em>Dry Nights</em> is specifically designed for your family.
+            </div>
+        </div>
+
+        <p>I stripped out all the medical jargon and created a lean, 20-page action plan. It is a ruthless, step-by-step protocol designed to rebuild your child’s confidence and permanently dry up their nights—with visible results in as little as 4 weeks.</p>
+    </section>
+
+    <!-- The Product Reveal -->
+    <section class="max-w-4xl mx-auto px-6 my-16">
+        <div class="bg-[#0A192F] rounded-2xl shadow-2xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center gap-12">
+            
+            <!-- Mock E-Book Cover using CSS -->
+            <div class="w-64 h-80 shrink-0 bg-[#FDFBF7] rounded-r-xl rounded-l-sm shadow-[15px_15px_30px_rgba(0,0,0,0.5)] border-l-[10px] border-[#C5A059] relative overflow-hidden flex flex-col pt-8 pb-4 px-6 text-[#0A192F]">
+                <div class="text-center font-black text-3xl leading-none mb-4 tracking-tighter">
+                    DRY NIGHTS
+                </div>
+                <div class="text-center font-bold text-sm leading-snug mb-auto uppercase">
+                    HOW TO END YOUR CHILD'S BEDWETTING SAFE AND FAST
+                </div>
+                
+                <div class="h-24 w-full bg-blue-100/50 rounded-t-full mt-4 flex items-end justify-center relative overflow-hidden">
+                     <div class="w-16 h-16 bg-[#C5A059] rounded-full absolute -bottom-8 opacity-20"></div>
+                </div>
+
+                <div class="text-center text-[10px] font-medium leading-tight mt-4">
+                    Safe, science-backed strategies to help your child stop bedwetting in as little as 4 weeks.
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-[#C5A059]">Here is exactly what you get inside:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-[#C5A059] shrink-0 mt-1 w-6 h-6"></i>
+                        <span><strong>The "Wait and See" Trap:</strong> Why doctors sometimes dismiss this too early, and the exact red flags that mean you must take action now.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-[#C5A059] shrink-0 mt-1 w-6 h-6"></i>
+                        <span><strong>The 3 Biological Triggers:</strong> How to pinpoint the exact physiological reason your child is wetting the bed (once you know this, the solution is obvious).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-[#C5A059] shrink-0 mt-1 w-6 h-6"></i>
+                        <span><strong>The "Bedwetting Alarm" Mistake:</strong> Why most parents use this device completely wrong causing tears, and the simple setup tweak that skyrockets success.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-[#C5A059] shrink-0 mt-1 w-6 h-6"></i>
+                        <span><strong>The 5-Minute Confidence Script:</strong> Exactly what to say to your child tomorrow morning to instantly lift the heavy burden of shame off their shoulders.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="max-w-3xl mx-auto px-6 my-16">
+        <div class="flex flex-col items-center text-center space-y-4">
+            <div class="flex text-[#C5A059]">
+                <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                <i data-lucide="star" class="fill-current w-6 h-6"></i>
+                <i data-lucide="star" class="fill-current w-6 h-6"></i>
+            </div>
+            <blockquote class="text-2xl font-medium italic text-gray-800">
+                "A simple, effective, and deeply compassionate resource. The results were dramatic for our family in just a few weeks. No more midnight laundry, and my son finally got to go to his first sleepover."
+            </blockquote>
+            <cite class="font-bold text-gray-500 uppercase tracking-widest text-sm">— A. Chen, Parent</cite>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA Section -->
+    <section id="pricing-section" class="max-w-2xl mx-auto px-6 my-16 text-center">
+        <h3 class="text-3xl font-extrabold mb-6">Imagine Walking Into Their Room Next Month...</h3>
+        <p class="text-lg text-gray-700 mb-8">
+            And seeing them beam with pride because they woke up completely dry. Toss the plastic mattress covers in the trash for good. The science is clear, and the roadmap is waiting for you.
+        </p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.05)] border border-gray-100">
+            <div class="flex justify-center items-center gap-2 mb-2">
+                <span class="text-gray-400 line-through text-xl">₦4000</span>
+                <span class="text-5xl font-black text-[#0A192F]">₦1500</span>
+            </div>
+            <p class="text-sm text-gray-500 uppercase tracking-wide font-bold mb-8">Instant Digital Download (PDF)</p>
+            
+            <a href="https://selar.com/drynights" class="w-full bg-[#C5A059] hover:bg-[#b08d4b] text-white font-bold text-xl py-5 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105 flex items-center justify-center gap-3">
+                <i data-lucide="book-open" class="w-6 h-6"></i>
+                Download "Dry Nights" Now
+                <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </a>
+            
+            <div class="flex items-center justify-center gap-2 mt-6 text-sm text-gray-600 font-medium">
+                <i data-lucide="shield-check" class="w-5 h-5 text-green-600"></i>
+                60-Day Ironclad Money-Back Guarantee
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA (Mobile/Desktop) -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] transition-transform duration-300 z-50 flex justify-center translate-y-full">
+        <div class="max-w-4xl w-full flex items-center justify-between gap-4">
+            <div class="hidden md:block">
+                <p class="font-bold text-[#0A192F]">Dry Nights: The 4-Week Action Plan</p>
+                <p class="text-sm text-gray-500">Stop the 2 AM routine for just ₦1500</p>
+            </div>
+            <a href="https://selar.com/drynights" class="w-full md:w-auto bg-[#0A192F] hover:bg-[#1a2d4c] text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors flex items-center justify-center gap-2">
+                Get Instant Access <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto px-6 my-24">
+        <h3 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+            
+            <!-- FAQ Item 1 -->
+            <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
+                <button class="faq-btn w-full text-left px-6 py-4 font-bold text-[#0A192F] flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                    Is 20 pages really enough to solve this?
+                    <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    Yes. Parents don't have time for 300-page medical textbooks. We stripped out the fluff and theory. This is a pure, step-by-step action plan you can read in 20 minutes tonight and implement tomorrow morning.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
+                <button class="faq-btn w-full text-left px-6 py-4 font-bold text-[#0A192F] flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                    What if my child is a 'deep sleeper'?
+                    <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    The 'deep sleeper' theory is one of the most common myths. The book explains exactly how to address this specific biological presentation and retrain the brain-bladder connection safely.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="border border-gray-200 rounded-lg bg-white overflow-hidden">
+                <button class="faq-btn w-full text-left px-6 py-4 font-bold text-[#0A192F] flex justify-between items-center hover:bg-gray-50 focus:outline-none">
+                    What if it doesn't work for my child?
+                    <i data-lucide="chevron-down" class="chevron-icon w-5 h-5 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden px-6 pb-4 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    You are protected by our 60-Day Guarantee. If you read the guide, implement the steps, and don't see a dramatic reduction in wet nights, email us for a full refund. No questions asked.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-400 text-sm border-t border-gray-200">
+        <p>© 2024 NextGen Parenting. All rights reserved.</p>
+        <p class="mt-2">Disclaimer: This information is for educational purposes and does not replace medical advice from your pediatrician.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Interactive Checklist Logic
+        const checklistIds = ['q1', 'q2', 'q3'];
+        const successMsg = document.getElementById('checklist-success');
+        
+        checklistIds.forEach(id => {
+            const checkbox = document.getElementById(id);
+            const label = document.getElementById(`label-${id}`);
+            
+            checkbox.addEventListener('change', () => {
+                // Update styling based on checked state
+                if (checkbox.checked) {
+                    label.classList.remove('bg-gray-50', 'border-transparent');
+                    label.classList.add('bg-[#FDFBF7]', 'border-[#C5A059]');
+                } else {
+                    label.classList.add('bg-gray-50', 'border-transparent');
+                    label.classList.remove('bg-[#FDFBF7]', 'border-[#C5A059]');
+                }
+                
+                // Check if any box is checked to show the success message
+                const anyChecked = checklistIds.some(cbId => document.getElementById(cbId).checked);
+                if (anyChecked) {
+                    successMsg.classList.remove('hidden');
+                } else {
+                    successMsg.classList.add('hidden');
+                }
+            });
+        });
+
+        // 2. Sticky CTA Scroll Logic
+        const stickyCta = document.getElementById('sticky-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                stickyCta.classList.remove('translate-y-full');
+                stickyCta.classList.add('translate-y-0');
+            } else {
+                stickyCta.classList.remove('translate-y-0');
+                stickyCta.classList.add('translate-y-full');
+            }
+        });
+
+        // 3. Smooth Scroll to Pricing
+        const scrollButtons = document.querySelectorAll('.scroll-to-pricing');
+        scrollButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.getElementById('pricing-section').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // 4. FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const answer = btn.nextElementSibling;
+                const icon = btn.querySelector('.chevron-icon');
+                
+                // Toggle Answer Visibility
+                answer.classList.toggle('hidden');
+                
+                // Toggle Icon Rotation
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
